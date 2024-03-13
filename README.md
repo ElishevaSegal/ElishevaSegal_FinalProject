@@ -11,7 +11,6 @@ Welcome to the Vintage Shop project, your premier destination for second-hand vi
 [AdminCredential](#adminCredential) <br>
 [SupportAndFeedback](#supportandfeedback) <br>
 
-
 ## Overview
 
 The Vintage Shop project is a web application that serves as an online marketplace for vintage items. Users can register as either sellers or buyers, each with tailored functionalities to suit their needs. Sellers can publish items for sale, manage their listings, and track sales, while buyers can browse items, add them to favorites, and securely make purchases using valid credit card information.
@@ -35,29 +34,31 @@ Server-side Setup:
 
     Download the project folder and open the server-side folder in Visual Studio.
     Open the terminal and run pnpm run watch to connect to the database.
-   
-    ```bash
-  pnpm run watch
-
-  ```
 
 Client-side Setup:
 
     Open the client-side folder in Visual Studio.
     In the terminal, run npm start to launch the website.
     Access the site in your web browser to begin using the application.
+
   <br>
 
-  ```bash
-  npm start
+```bash
+npm start
 
-  ```
-  ## AdminCredentials:
+```
+
+    ```bash
+
+pnpm run watch
+
+```
+## AdminCredentials:
 
 To access the admin account and CRM functionality, please use the following credentials:
 
-    Email: admin@example.com
-    Password: admin123
+  Email: admin@example.com
+  Password: admin123
 
 ## SupportAndFeedback
 
@@ -69,6 +70,7 @@ Thank you for choosing our Vintage Shop project! We hope you enjoy your journey 
 
 Join Now
 
-   - Explore the Second-Hand Vintage Emporium.
-   - Create your account to start your vintage journey.
-   - Begin discovering timeless treasures, connecting with sellers, and indulging in the world of vintage fashion.
+ - Explore the Second-Hand Vintage Emporium.
+ - Create your account to start your vintage journey.
+ - Begin discovering timeless treasures, connecting with sellers, and indulging in the world of vintage fashion.
+```
