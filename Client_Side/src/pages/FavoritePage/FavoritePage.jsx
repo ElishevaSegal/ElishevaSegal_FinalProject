@@ -1,0 +1,82 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import ItemComponent from "../../components/ItemComponent";
+import { Container, Grid, Typography } from "@mui/material";
+import nextKey from "generate-my-key";
+import { useSelector } from "react-redux";
+import likeItemNormalization from "../itemsPage/likeItemNormalization";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import ROUTES from "../../routes/ROUTES";
+
+const FavoritePage = () => {
+  const navigate = useNavigate();
+  const [dataFromServer, setDataFromServer] = useState([]);
+  const userData = useSelector((bigPie) => bigPie.authSlice.userData);
+
+  useEffect(() => {
+    axios
+      .get("/items")
+      .then(({ data }) => {
+        if (userData) data = likeItemNormalization(data, userData._id);
+        setDataFromServer(data.filter((item) => item.likes == true));
+      })
+      .catch((err) => {
+        toast("Looks like there is problem with the server..", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      });
+  }, []);
+
+  const handleLikeSuccess = (_id) => {
+    setDataFromServer((current) => {
+      const newData = current.filter((x) => x._id !== _id);
+      return newData;
+    });
+  };
+  const handleViewItem = async (_id) => {
+    navigate(`${ROUTES.ITEM}/${_id}`);
+  };
+
+  return (
+    <Container sx={{ paddingBottom: "60px" }}>
+      <Typography
+        variant="h2"
+        sx={{ textAlign: "center", mb: 1, padding: "10px", pb: "0px" }}
+      >
+        Your Favorites Items
+      </Typography>
+      <Typography variant="h5" sx={{ textAlign: "center", marginBottom: "3%" }}>
+        Craft your own collection of beloved vintage items. Effortlessly access and admire the pieces that capture your heart. Simplify your vintage shopping experience with curated favorites at your fingertips.
+      </Typography>
+      <Grid container spacing={2}>
+        {dataFromServer.map((item) => (
+          <Grid item key={nextKey()} xs={12} sm={6} md={4} lg={3}>
+            <ItemComponent
+              _id={item._id}
+              title={item.title}
+              brand={item.brand}
+              price={`${item.price} $ `}
+              size={item.size}
+              phone={item.phone}
+              img={item.image.url}
+              alt={item.image.alt}
+              status={item.status}
+              like={item.likes}
+              onViewItem={handleViewItem}
+              onLikeSuccess={handleLikeSuccess}
+            />
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  );
+};
+export default FavoritePage;
