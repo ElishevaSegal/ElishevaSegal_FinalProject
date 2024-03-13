@@ -43,16 +43,7 @@ Client-side Setup:
 
   <br>
 
-```bash
-npm start
 
-```
-
-    ```bash
-
-pnpm run watch
-
-```
 ## AdminCredentials:
 
 To access the admin account and CRM functionality, please use the following credentials:
@@ -73,4 +64,4 @@ Join Now
  - Explore the Second-Hand Vintage Emporium.
  - Create your account to start your vintage journey.
  - Begin discovering timeless treasures, connecting with sellers, and indulging in the world of vintage fashion.
-
+```
