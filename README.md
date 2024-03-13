@@ -73,4 +73,4 @@ Join Now
  - Explore the Second-Hand Vintage Emporium.
  - Create your account to start your vintage journey.
  - Begin discovering timeless treasures, connecting with sellers, and indulging in the world of vintage fashion.
-```
+
