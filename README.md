@@ -48,12 +48,12 @@ Client-side Setup:
 
 To access the admin account and CRM functionality, please use the following credentials:
 
-  Email: admin@example.com
-  Password: admin123
+  Email: admin@gmail.com
+  Password: 123456aA!
 
 ## SupportAndFeedback
 
-For any questions, issues, or feedback regarding the Vintage Shop project, please contact edendrori36@gmail.com.
+For any questions, issues, or feedback regarding the Vintage Shop project, please contact esegal390@gmail.com.
 
 Thank you for choosing our Vintage Shop project! We hope you enjoy your journey through the world of vintage items on our platform.
 
