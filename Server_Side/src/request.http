@@ -172,10 +172,9 @@ POST http://localhost:8081/api/v1/contact
 Content-Type: application/json
 
 {
-    "name": "eden",
-    "email": "eden@gmail.com",
-    "message": "hallo"
-    
+    "name": "Moran",
+    "email": "moran@gmail.com",
+    "message": "can i return an item? please contact me 0504186390"
   }
 
 ### GET create item:

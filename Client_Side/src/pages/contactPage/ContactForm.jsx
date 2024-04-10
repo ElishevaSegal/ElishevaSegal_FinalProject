@@ -33,7 +33,7 @@ const ContactForm = () => {
         email: inputsValue.email,
         message: inputsValue.message,
       };
-
+      const { data } = await axios.post("/contact", request);
       toast("We got your message, thank you :)", {
         position: "top-center",
         autoClose: 5000,
